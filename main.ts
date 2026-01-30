@@ -672,6 +672,7 @@ function moveTaskToGroup(taskId: string, groupId: string) {
         if (idx !== -1) { fromGroup = g; fromIndex = idx; }
     });
 
+    // Fix: Ensure groupId is used or acknowledge it is used
     const toGroup = groups.find(g => g.id === groupId);
 
     if (fromGroup && fromIndex !== -1 && toGroup) {
